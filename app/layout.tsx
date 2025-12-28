@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import I18nProvider from "@/components/common/i18n-provider";
 import { AuthProvider } from "@/context/auth-provider";
+import  { Toaster } from 'react-hot-toast';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <AuthProvider>
           <I18nProvider>
             {children}
+            <Toaster />
           </I18nProvider>
         </AuthProvider>
 

@@ -230,7 +230,8 @@
     "registration_success": "تم إنشاء الحساب بنجاح",
     "registration_failed": "فشل إنشاء الحساب",
     "thankYou": "شكراً لانضمامك إلينا!",
-    "pleaseTryAgain": "حاول مرة أخرى لاحقاً"
+    "pleaseTryAgain": "حاول مرة أخرى لاحقاً",
+     "or":" او "
   },
   "settings": {
     "title": "إعدادات التطبيق",

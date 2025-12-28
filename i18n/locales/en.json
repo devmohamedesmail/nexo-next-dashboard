@@ -230,7 +230,8 @@
     "registration_success": "Registration Successful",
     "registration_failed": "Registration Failed",
     "thankYou": "Thank you for joining us!",
-    "pleaseTryAgain": "Please try again later"
+    "pleaseTryAgain": "Please try again later",
+    "or":"Or"
   },
   "settings": {
     "title": "Application Settings",

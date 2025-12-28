@@ -30,9 +30,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const login = async (identifier: string, password: string) => {
     try {
       const res = await axios.post(`${config.API_URL}/auth/login`, { identifier, password })
-      setUser(res.data.user)
+      const userData = res.data.user
+      setUser(userData)
       localStorage.setItem('user', JSON.stringify(res.data.user))
-      return { success: true }
+      return { 
+        success: true,
+        user:userData
+      }
     } catch (error) {
       return { success: false, message: getErrorMessage(error) }
     }
