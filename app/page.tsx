@@ -1,6 +1,5 @@
 'use client'
 import LanguageSwitcher from "@/components/common/language-switcher";
-import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
