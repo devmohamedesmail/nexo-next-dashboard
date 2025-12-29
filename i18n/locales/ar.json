@@ -37,7 +37,9 @@
     "settings": "الإعدادات",
     "vehicles": "المركبات",
     "stores": "المتاجر",
-    "pages": "الصفحات"
+    "pages": "الصفحات",
+    "categories":" الاقسام ",
+    "subcategories":"  الاقسام الفرعية"
   },
   "header": {
     "searchPlaceholder": "بحث...",
@@ -362,5 +364,17 @@
     "page_content": "محتوى الصفحة",
     "enter_page_content": "أدخل محتوى الصفحة",
     "pages_list": "قائمة الصفحات"
+  },
+   "categories": {
+    "add": "إضافة تصنيف جديد",
+     "add_sub": "إضافة تصنيف فرعي",
+      "category":" القسم ",
+    "titleEn": "اسم التصنيف بالإنجليزية",
+    "titleAr": "اسم التصنيف بالعربية",
+    "selectcategory":" اختر قسما",
+    "validation": {
+      "titleEn": "اسم التصنيف باللغة الإنجليزية مطلوب",
+      "titleAr": "اسم التصنيف باللغة العربية مطلوب"
+    }
   }
 }

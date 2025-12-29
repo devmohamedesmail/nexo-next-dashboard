@@ -41,7 +41,7 @@ export default function Places() {
     const { t } = useTranslation();
     const {user}=useAuth();
 
-    console.log("user from places", user)
+
 
 
     /* ================= FETCH ================= */

@@ -37,7 +37,9 @@
     "settings": "Settings",
     "vehicles": "Vehicles",
     "stores": "Stores",
-    "pages": "Pages"
+    "pages": "Pages",
+    "categories":"Categories",
+    "subcategories":"SubCategories"
   },
   "header": {
     "searchPlaceholder": "Search...",
@@ -362,5 +364,18 @@
     "page_content": "Page Content",
     "enter_page_content": "Enter Page Content",
     "pages_list": "Pages List"
+  },
+  "categories": {
+    "add": "Add New Category",
+    "add_sub": "Add New SubCategory",
+    "category":"Category",
+    "titleEn": "Category Name (English)",
+    "titleAr": "Category Name (Arabic)",
+    "selectcategory":" Selec category",
+    "validation": {
+      "titleEn": "English category name is required",
+      "titleAr": "Arabic category name is required"
+    }
   }
+  
 }
