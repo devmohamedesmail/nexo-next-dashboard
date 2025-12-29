@@ -1,5 +1,5 @@
-import Header from '@/components/dashboard/header'
-import Sidebar from '@/components/dashboard/sidebar'
+import Header from '@/components/delivery-app/header'
+import Sidebar from '@/components/delivery-app/sidebar'
 import React from 'react'
 
 export default function Layout({children}: {children: React.ReactNode}) {

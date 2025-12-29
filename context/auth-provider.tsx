@@ -4,6 +4,7 @@ import React, { createContext, useContext, useState } from 'react'
 import axios from 'axios'
 import { config } from '@/constants/config'
 import { getErrorMessage } from '@/helper/get-error'
+import { useCookies } from 'react-cookie'
 
 interface User {
   id: number
@@ -26,16 +27,19 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const saved = localStorage.getItem('user')
     return saved ? JSON.parse(saved) : null
   })
+  const [_, setCookie] = useCookies(["access_token"]);
 
   const login = async (identifier: string, password: string) => {
     try {
       const res = await axios.post(`${config.API_URL}/auth/login`, { identifier, password })
       const userData = res.data.user
-      setUser(userData)
-      localStorage.setItem('user', JSON.stringify(res.data.user))
-      return { 
+      const { user, token } = res.data;
+      setUser(user)
+      localStorage.setItem('user', JSON.stringify(user))
+      setCookie("access_token", token)
+      return {
         success: true,
-        user:userData
+        user: userData
       }
     } catch (error) {
       return { success: false, message: getErrorMessage(error) }

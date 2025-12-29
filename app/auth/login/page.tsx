@@ -10,13 +10,15 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import toast from 'react-hot-toast';
-
+import { useCookies } from 'react-cookie';
 
 export default function LoginPage() {
   const [rememberMe, setRememberMe] = useState(false)
   const { t } = useTranslation();
   const { login, user } = useAuth()
   const router = useRouter()
+  const [cookies] = useCookies(['access_token']);
+  console.log(cookies.access_token)
 
   const formik = useFormik({
     initialValues: {
@@ -55,6 +57,7 @@ export default function LoginPage() {
     <div className="w-full max-w-md">
       <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
         {/* Header Section */}
+      
         <div className="bg-linear-to-br from-[#fd4a12] to-[#e03d0a] px-8 py-12 text-center relative overflow-hidden">
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -mr-20 -mt-20"></div>

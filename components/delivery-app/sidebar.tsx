@@ -1,5 +1,5 @@
 'use client'
-import React ,{useState} from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FiHome, FiUsers, FiMapPin, FiSettings, FiMenu, FiX, FiUser } from 'react-icons/fi'
 import { FaTaxi } from 'react-icons/fa'
@@ -7,59 +7,69 @@ import { IconType } from 'react-icons'
 import Link from 'next/link'
 
 export default function Sidebar() {
-     const [isCollapsed, setIsCollapsed] = useState(false)
-     const { t } = useTranslation()
+  const [isCollapsed, setIsCollapsed] = useState(false)
+  const { t } = useTranslation()
 
-     const menuItems: Array<{ title: string; icon: IconType; href: string }> = [
+  const menuItems: Array<{ title: string; icon: IconType; href: string }> = [
     {
       title: t('sidebar.dashboard'),
       icon: FiHome,
-      href: '/admin',
-    },
-    {
-      title: t('sidebar.users'),
-      icon: FiUsers,
-      href: '/admin/users',
+      href: '/delivery-app',
     },
     {
       title: t('sidebar.places'),
       icon: FiMapPin,
-      href: '/admin/places',
+      href: '/delivery-app/places',
     },
     {
       title: t('sidebar.areas'),
       icon: FiMapPin,
-      href: '/admin/areas',
+      href: '/delivery-app/areas',
     },
-    {
-      title: t('sidebar.stores'),
-      icon: FiMapPin,
-      href: '/admin/stores',
-    },
-    {
-      title: t('sidebar.vehicles'),
-      icon: FiMapPin,
-      href: '/admin/vehicles',
-    },
-     {
-      title: t('sidebar.pages'),
-      icon: FiMapPin,
-      href: '/admin/pages',
-    },
-   
-    {
-      title: t('sidebar.settings'),
-      icon: FiSettings,
-      href: '/admin/settings',
-    },
+
+
+
+
+
+
+
+
+    // {
+    //   title: t('sidebar.users'),
+    //   icon: FiUsers,
+    //   href: '/admin/users',
+    // },
+
+    // {
+    //   title: t('sidebar.stores'),
+    //   icon: FiMapPin,
+    //   href: '/admin/stores',
+    // },
+
+    // {
+    //   title: t('sidebar.vehicles'),
+    //   icon: FiMapPin,
+    //   href: '/admin/vehicles',
+    // },
+
+    // {
+    //   title: t('sidebar.pages'),
+    //   icon: FiMapPin,
+    //   href: '/admin/pages',
+    // },
+
+    // {
+    //   title: t('sidebar.settings'),
+    //   icon: FiSettings,
+    //   href: '/admin/settings',
+    // },
   ]
 
-    
+
   return (
     <aside
-      className={`${
-        isCollapsed ? 'w-20' : 'w-64'
-      } bg-gray-900 text-white min-h-screen transition-all duration-300 flex flex-col`}
+      className={`${isCollapsed ? 'w-20' : 'w-64'
+        } bg-gray-900 text-white min-h-screen transition-all duration-300 flex flex-col`}
     >
       {/* Logo Section */}
       <div className="p-4 flex items-center justify-between border-b border-gray-800">
@@ -73,9 +83,8 @@ export default function Sidebar() {
         )}
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
-          className={`p-2 hover:bg-gray-800 rounded-lg transition-colors ${
-            isCollapsed ? 'mx-auto' : ''
-          }`}
+          className={`p-2 hover:bg-gray-800 rounded-lg transition-colors ${isCollapsed ? 'mx-auto' : ''
+            }`}
           aria-label="Toggle sidebar"
         >
           {isCollapsed ? <FiMenu className="w-5 h-5" /> : <FiX className="w-5 h-5" />}
